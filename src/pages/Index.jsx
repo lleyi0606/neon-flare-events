@@ -1,9 +1,11 @@
 import LeftNavigation from "@/components/LeftNavigation";
 import Hero from "@/components/Hero";
-import Events from "@/components/Events";
+import Schedule from "@/components/Events";
 import People from "@/components/People";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import Location from "@/components/Location";
+import RSVP from "@/components/RSVP";
 
 const Index = () => {
   return (
@@ -12,9 +14,11 @@ const Index = () => {
       <div className="ml-20">
         <main>
           <Hero />
-          <Events />
+          <Schedule />
           <People />
+          <Location />
           <FAQ />
+          <RSVP />
           <Footer />
         </main>
       </div>

@@ -1,29 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone, Heart, Instagram, Camera } from "lucide-react";
-import Location from "./Location";
 
 const Footer = () => {
   return (
     <footer className="bg-darker-surface border-t border-border">
       <div className="container mx-auto px-6 py-16">
-
-        <Location />
-
-        {/* RSVP Section */}
-        <section id="rsvp" className="bg-dark-surface rounded-xl p-8 mb-12 border border-gold/30">
-          <div className="text-center max-w-2xl mx-auto">
-            <h3 className="font-heading text-2xl font-bold mb-4 text-foreground">
-              Please RSVP by May 15th
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              We can't wait to celebrate with you! Please let us know if you'll be joining us for our special weekend.
-            </p>
-            <Button variant="outline" className="px-8 py-3 border-gold text-gold hover:bg-gold hover:text-white">
-              RSVP Now
-            </Button>
-          </div>
-        </section>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Couple Info */}
           <div>

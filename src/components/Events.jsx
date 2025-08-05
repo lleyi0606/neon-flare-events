@@ -1,7 +1,7 @@
 import EventCard from "./EventCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-const Events = () => {
+const Schedule = () => {
   const eventsByDay = {
     "friday": {
       date: "Friday, June 15th",
@@ -117,4 +117,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default Schedule;
