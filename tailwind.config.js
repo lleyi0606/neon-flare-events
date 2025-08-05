@@ -16,6 +16,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'heading': ['Cormorant Garamond', 'serif'],
+				'body': ['Manrope', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -50,10 +54,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom colors for events theme
-				'neon-orange': 'hsl(var(--neon-orange))',
-				'dark-surface': 'hsl(var(--dark-surface))',
-				'darker-surface': 'hsl(var(--darker-surface))',
+				// Custom colors for white and gold theme
+				'gold': 'hsl(var(--gold))',
+				'gold-light': 'hsl(var(--gold-light))',
+				'gold-dark': 'hsl(var(--gold-dark))',
+				'white-surface': 'hsl(var(--white-surface))',
+				'cream-surface': 'hsl(var(--cream-surface))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -91,13 +97,13 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'pulse-orange': 'pulse-orange 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-				'glow': 'glow 2s ease-in-out infinite alternate',
+				'pulse-gold': 'pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'glow-gold': 'glow-gold 2s ease-in-out infinite alternate',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-up': 'slide-up 0.6s ease-out'
 			},
 			keyframes: {
-				'pulse-orange': {
+				'pulse-gold': {
 					'0%, 100%': { 
 						opacity: '1',
 						transform: 'scale(1)'
@@ -107,12 +113,12 @@ export default {
 						transform: 'scale(1.05)'
 					}
 				},
-				'glow': {
+				'glow-gold': {
 					'from': {
-						'text-shadow': '0 0 10px hsl(var(--neon-orange) / 0.5), 0 0 20px hsl(var(--neon-orange) / 0.3)'
+						'text-shadow': '0 0 10px hsl(var(--gold) / 0.3), 0 0 20px hsl(var(--gold) / 0.2)'
 					},
 					'to': {
-						'text-shadow': '0 0 20px hsl(var(--neon-orange) / 0.8), 0 0 30px hsl(var(--neon-orange) / 0.6)'
+						'text-shadow': '0 0 20px hsl(var(--gold) / 0.6), 0 0 30px hsl(var(--gold) / 0.4)'
 					}
 				},
 				'fade-in': {

@@ -36,8 +36,8 @@ const WeddingParty = () => {
     <section id="wedding-party" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-pink-400">Wedding Party</span>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
+            The <span className="text-pink-400">People</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Meet the special people who will be standing with us as we say "I do" - our closest family and friends who have been part of our journey.
@@ -48,7 +48,7 @@ const WeddingParty = () => {
           {weddingParty.map((person, index) => (
             <div 
               key={index} 
-              className="group relative bg-dark-surface rounded-xl p-6 border border-border hover:border-pink-400/30 transition-all duration-300 hover:scale-105 hover:shadow-card animate-fade-in"
+              className="group relative bg-dark-surface rounded-xl p-6 border border-border hover:border-gold/30 transition-all duration-300 hover:scale-105 hover:shadow-card animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Person Image */}
@@ -56,17 +56,17 @@ const WeddingParty = () => {
                 <img
                   src={person.image}
                   alt={person.name}
-                  className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-pink-400/30 group-hover:border-pink-400 transition-colors"
+                  className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-gold/30 group-hover:border-gold transition-colors"
                 />
-                <div className="absolute inset-0 w-24 h-24 rounded-full mx-auto bg-gradient-to-r from-pink-400/20 to-rose-400/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 w-24 h-24 rounded-full mx-auto bg-gradient-to-r from-gold/20 to-gold-light/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
 
               {/* Person Info */}
               <div className="text-center">
-                <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-pink-400 transition-colors">
+                <h3 className="font-heading text-xl font-bold mb-2 text-foreground group-hover:text-pink-400 transition-colors">
                   {person.name}
                 </h3>
-                <p className="text-pink-400 font-medium mb-1">
+                <p className="text-gold font-medium mb-1">
                   {person.role}
                 </p>
                 <p className="text-muted-foreground text-sm mb-4">
@@ -78,8 +78,8 @@ const WeddingParty = () => {
 
                 {/* Heart Icon */}
                 <div className="flex justify-center">
-                  <div className="p-2 rounded-full border border-pink-400/30 bg-pink-400/10">
-                    <Heart size={16} className="text-pink-400" />
+                  <div className="p-2 rounded-full border border-gold/30 bg-gold/10">
+                    <Heart size={16} className="text-gold" />
                   </div>
                 </div>
               </div>
@@ -88,9 +88,9 @@ const WeddingParty = () => {
         </div>
 
         <div className="text-center mt-12">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-pink-400/10 border border-pink-400/30 rounded-lg">
-            <Users2 className="text-pink-400" size={20} />
-            <span className="text-pink-400 font-medium">Our Complete Wedding Party</span>
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gold/10 border border-gold/30 rounded-lg">
+            <Users2 className="text-gold" size={20} />
+            <span className="text-gold font-medium">Our Complete Wedding Party</span>
           </div>
         </div>
       </div>

@@ -76,7 +76,7 @@ const Events = () => {
     <section id="events" className="py-20 bg-darker-surface">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
             Wedding <span className="text-pink-400">Schedule</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -84,23 +84,28 @@ const Events = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="friday" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="friday" className="text-lg py-3">Friday</TabsTrigger>
-            <TabsTrigger value="saturday" className="text-lg py-3">Saturday</TabsTrigger>
-            <TabsTrigger value="sunday" className="text-lg py-3">Sunday</TabsTrigger>
-          </TabsList>
+        <Tabs defaultValue="friday" className="w-full max-w-6xl mx-auto">
+          <div className="flex justify-center mb-8">
+            <TabsList className="grid grid-cols-3 w-fit h-auto p-1">
+              <TabsTrigger value="friday" className="font-heading text-lg py-3 px-6">Friday</TabsTrigger>
+              <TabsTrigger value="saturday" className="font-heading text-lg py-3 px-6">Saturday</TabsTrigger>
+              <TabsTrigger value="sunday" className="font-heading text-lg py-3 px-6">Sunday</TabsTrigger>
+            </TabsList>
+          </div>
 
           {Object.entries(eventsByDay).map(([day, dayData]) => (
             <TabsContent key={day} value={day} className="space-y-8">
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-semibold text-pink-400 mb-2">{dayData.date}</h3>
+                <h3 className="font-heading text-2xl font-semibold text-pink-400 mb-2">{dayData.date}</h3>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-0">
                 {dayData.events.map((event, index) => (
                   <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                     <EventCard {...event} />
+                    {index < dayData.events.length - 1 && (
+                      <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-30" />
+                    )}
                   </div>
                 ))}
               </div>

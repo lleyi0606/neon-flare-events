@@ -1,17 +1,23 @@
-import Header from "@/components/Header";
+import LeftNavigation from "@/components/LeftNavigation";
 import Hero from "@/components/Hero";
 import Events from "@/components/Events";
-import WeddingParty from "@/components/Speakers";
+import People from "@/components/People";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <Hero />
-      <Events />
-      <WeddingParty />
-      <Footer />
+      <LeftNavigation />
+      <div className="ml-20">
+        <main>
+          <Hero />
+          <Events />
+          <People />
+          <FAQ />
+          <Footer />
+        </main>
+      </div>
     </div>
   );
 };
