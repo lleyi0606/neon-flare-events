@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Wedding Invitations & Events
 
 ## Project info
 
